@@ -21,4 +21,4 @@ COPY --from=builder /go/bin/grpcwebproxy .
 
 EXPOSE 8080 8080
 
-ENTRYPOINT ["/grpcwebproxy"]
+ENTRYPOINT ["/bin/sh","-c","/grpcwebproxy"]
