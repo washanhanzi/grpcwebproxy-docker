@@ -1,0 +1,10 @@
+version: '3'
+services:
+    grpcwebproxy:
+        image: washanhanzi/grpcwebproxy
+        restart: always
+        ports:
+          - "8080:8080"
+        # depends_on: 
+        #   - mali
+        command: --backend_addr=mali:50051 --run_tls_server=false --allow_all_origins
